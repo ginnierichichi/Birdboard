@@ -16,3 +16,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['middleware'=>'auth'], function () {
+
+    Route::get('/projects', 'ProjectsController@index');        //dashboard route
+    Route::get('/projects/create', 'ProjectsController@create');        //
+    Route::get('/projects/{project}', 'ProjectsController@show');       //dashboard to show a project
+    Route::post('/projects', 'ProjectsController@store');           //route that persists the project to the database
+
+    Route::get('/home', 'HomeController@index')->name('home');
+});
+
+Auth::routes();
+
+
