@@ -2,6 +2,8 @@
 
 namespace Tests\Feature;
 
+use App\Project;
+use Facades\Tests\Setup\ProjectFactory;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
@@ -16,6 +18,7 @@ class ManageProjectsTest extends TestCase
         $project = factory('App\Project')->create();
 
         $this->get('/projects')->assertRedirect('login');
+        $this->get('/projects/create')->assertRedirect('login');
         $this->get($project->path())->assertRedirect('login');
         $this->post('/projects', $project->toArray())->assertRedirect('login');
 
@@ -27,33 +30,57 @@ class ManageProjectsTest extends TestCase
         $this->withoutExceptionHandling();
 
         $this->signIn();
-        //$this->actingAs(factory('App\User')->create());
-
         $this->get('/projects/create')->assertStatus(200);
 
         $attributes = [
             'title' => $this->faker->sentence,
             'description' => $this->faker->sentence,
+            'notes' => 'General notes here.'
 
         ];
 
-        $this->post('/projects', $attributes)->assertRedirect('/projects');
+        $response= $this->post('/projects', $attributes);
+
+        $project = Project::where($attributes)->first();
+
+        $response->assertRedirect($project->path());
+
+        $this->get($project->path())
+            ->assertSee($attributes['title'])
+            ->assertSee($attributes['description'])
+            ->assertSee($attributes['notes']);
+    }
+
+    /** @test */
+
+    public function a_user_can_update_a_project()
+    {
+        /* $this->signIn();
+        $this->withoutExceptionHandling(); //disables laravels exception handling
+
+        $project = factory ('App\Project')->create(['owner_id'=>auth()->id()]); */
+
+        $project = ProjectFactory::create();
+
+        $this->actingAs($project->owner)
+            ->patch($project->path(), $attributes = ['notes' => 'Changed'])
+            ->assertRedirect($project->path());
 
         $this->assertDatabaseHas('projects', $attributes);
 
-        $this->get('/projects')->assertSee($attributes['title']);
-    }
 
+    }
 
 
     /** @test */
     public function a_user_can_view_their_project()
     {
-        $this->be(factory('App\User')->create());
-        $this->withoutExceptionHandling(); //disables laravels exception handling
-        $project = factory ('App\Project')->create(['owner_id'=>auth()->id()]);
+        /* $this->signIn();
+        $project = factory ('App\Project')->create(['owner_id'=>auth()->id()]); */
 
-        $this->get($project->path())
+        $project = ProjectFactory::create();
+        $this->actingAs($project->owner)
+            ->get($project->path())
             ->assertSee($project->title)
             ->assertSee($project->description);
     }
@@ -62,7 +89,7 @@ class ManageProjectsTest extends TestCase
     /** @test */
     public function a_user_cannot_view_the_projects_of_others()
     {
-        $this->be(factory('App\User')->create());
+        $this->signIn();
         //$this->withoutExceptionHandling(); //disables laravels exception handling
         $project = factory ('App\Project')->create();
         $this->get($project->path())->assertStatus(403);
@@ -70,9 +97,20 @@ class ManageProjectsTest extends TestCase
     }
 
     /** @test */
+    public function a_user_cannot_update_the_projects_of_others()
+    {
+        $this->signIn();
+        //$this->withoutExceptionHandling(); //disables laravels exception handling
+        $project = factory ('App\Project')->create();
+        $this->patch($project->path())->assertStatus(403);
+
+    }
+
+
+    /** @test */
     public function a_project_requires_a_title() //user needs to be signed in.
     {
-        $this->actingAs(factory('App\User')->create());
+        $this->signIn();
         $attributes = factory('App\Project')->raw(['title'=> '']);
 
         $this->post('/projects', $attributes)->assertSessionhasErrors('title');
@@ -82,7 +120,7 @@ class ManageProjectsTest extends TestCase
     /** @test */
     public function a_project_requires_a_description()
     {
-        $this->actingAs(factory('App\User')->create());
+        $this->signIn();
         $attributes = factory('App\Project')->raw(['title'=> '', 'description'=> '']);
         $this->post('/projects', $attributes)->assertSessionhasErrors('description');
     }

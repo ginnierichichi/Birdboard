@@ -22,8 +22,11 @@ Route::group(['middleware'=>'auth'], function () {
     Route::get('/projects', 'ProjectsController@index');        //dashboard route
     Route::get('/projects/create', 'ProjectsController@create');        //
     Route::get('/projects/{project}', 'ProjectsController@show');       //dashboard to show a project
-    Route::post('/projects', 'ProjectsController@store');           //route that persists the project to the database
+    Route::patch('/projects/{project}', 'ProjectsController@update');
+    Route::post('/projects', 'ProjectsController@store');       //route that persists the project to the database
 
+    Route::post('/projects/{project}/tasks', 'ProjectTasksController@store');
+    Route::patch('/projects/{project}/tasks/{task}', 'ProjectTasksController@update'); //listen for a patch request & fetch tasks
     Route::get('/home', 'HomeController@index')->name('home');
 });
 
