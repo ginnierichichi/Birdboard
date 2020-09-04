@@ -11,28 +11,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f54874a-e542-44ec-b4b2-edd28fef0afc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/birdboard.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Project.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/projects/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/projects/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/projects/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/projects/card.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/projects/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/projects/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ManageProjectsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ManageProjectsTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/TestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCase.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +185,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599034352989</updated>
-      <workItem from="1599034354692" duration="31049000" />
+      <workItem from="1599034354692" duration="45952000" />
     </task>
     <servers />
   </component>
@@ -222,10 +212,10 @@
       <screen x="2560" y="155" width="2560" height="1417" />
     </state>
     <state x="3217" y="478" key="NewPhpClassDialog/2560.155.2560.1417/-1680.198.1680.1027/0.23.2560.1337@2560.155.2560.1417" timestamp="1599049294612" />
-    <state x="3321" y="730" key="NewPhpFileDialog" timestamp="1599122356755">
+    <state x="3321" y="730" key="NewPhpFileDialog" timestamp="1599206203627">
       <screen x="2560" y="155" width="2560" height="1417" />
     </state>
-    <state x="3321" y="730" key="NewPhpFileDialog/2560.155.2560.1417/-1680.198.1680.1027/0.23.2560.1337@2560.155.2560.1417" timestamp="1599122356755" />
+    <state x="3321" y="730" key="NewPhpFileDialog/2560.155.2560.1417/-1680.198.1680.1027/0.23.2560.1337@2560.155.2560.1417" timestamp="1599206203627" />
     <state x="3456" y="477" key="SettingsEditor" timestamp="1599040400508">
       <screen x="2560" y="155" width="2560" height="1417" />
     </state>
@@ -238,9 +228,9 @@
       <screen x="2560" y="155" width="2560" height="1417" />
     </state>
     <state x="3108" y="386" key="run.anything.popup/2560.155.2560.1417/-1680.198.1680.1027/0.23.2560.1337@2560.155.2560.1417" timestamp="1599058836548" />
-    <state x="3108" y="480" width="838" height="1032" key="search.everywhere.popup" timestamp="1599126617791">
+    <state x="3108" y="480" width="838" height="1032" key="search.everywhere.popup" timestamp="1599132394544">
       <screen x="2560" y="155" width="2560" height="1417" />
     </state>
-    <state x="3108" y="480" width="838" height="1032" key="search.everywhere.popup/2560.155.2560.1417/-1680.198.1680.1027/0.23.2560.1337@2560.155.2560.1417" timestamp="1599126617791" />
+    <state x="3108" y="480" width="838" height="1032" key="search.everywhere.popup/2560.155.2560.1417/-1680.198.1680.1027/0.23.2560.1337@2560.155.2560.1417" timestamp="1599132394544" />
   </component>
 </project>
