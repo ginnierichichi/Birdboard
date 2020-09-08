@@ -26,14 +26,16 @@ class ProjectTest extends TestCase
         $this->assertInstanceOf('App\User', $project->owner);
     }
 
+
     /** @test */
-    public function it_can_add_a_task()     //given i have a project, if i call this method. What should be the response?
+    public function it_can_add_a_task()   //given i have a project, if i call this method. What should be the response?
     {
         $project = factory('App\Project')->create();
 
-       $task = $project->addTask('Test task');
+        $task = $project->addTask('Test task');
 
-        $this->assertCount(1, $project->tasks);     //call project tasks, expecting 1 task.
+        $this->assertCount(1, $project->tasks);  //call project tasks, expecting 1 task.
         $this->assertTrue($project->tasks->contains($task));
     }
+
 }

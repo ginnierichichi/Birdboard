@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,6 +20,7 @@ Route::group(['middleware'=>'auth'], function () {
     Route::get('/projects', 'ProjectsController@index');        //dashboard route
     Route::get('/projects/create', 'ProjectsController@create');        //
     Route::get('/projects/{project}', 'ProjectsController@show');       //dashboard to show a project
+    Route::get('/projects/{project}/edit', 'ProjectsController@edit');
     Route::patch('/projects/{project}', 'ProjectsController@update');
     Route::post('/projects', 'ProjectsController@store');       //route that persists the project to the database
 

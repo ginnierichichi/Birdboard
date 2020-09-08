@@ -7,7 +7,7 @@
             <p class="text-gray-600" style="font-size: 20px;">
                 <a href="/projects">My Projects</a> / {{$project->title}}
             </p>
-            <a href="/projects/create" class="button">New Project</a>
+            <a href="{{ $project->path() . '/edit' }}" class="button">Edit Project</a>
         </div>
     </header>
 
@@ -17,15 +17,14 @@
                   <div class="mb-6">
                         <h2 class="text-grey-600" style="font-size: 20px;">Tasks</h2>
                       {{--tasks--}}
-
                       @foreach ($project->tasks as $task)
                           <div class="card mb-3">
                               <form method="POST" action="{{ $project->path() . '/tasks/' . $task->id }}">
                                   @method('PATCH')
                                   @csrf
                                   <div class="flex">
-                                        <input name="body" value="{{ $task->body }}" class="w-full {{ $task->completed ? 'text-grey-600' : '' }}">
-                                        <input name="completed" type="checkbox" onChange="this.form.submit() {{ $task->completed ? 'checked' : ''}}">
+                                      <input name="body" value="{{ $task->body }}" class="w-full {{ $task->completed ? 'text-grey-600' : '' }}">
+                                      <input name="completed" type="checkbox" onChange="this.form.submit()" {{ $task->completed ? 'checked' : '' }}>
                                   </div>
 
                               </form>
@@ -55,9 +54,18 @@
                   </form>
               </div>
 
+              @if  ($errors->any())
+                  <div class="field mt-6">
+                      @foreach($error->all() as $error)
+                          <li class="text-sm text-red-700">{{ $error }}</li>
+                      @endforeach
+                  </div>
+              @endif
 
               <div class="lg:w-1/4 px-3">
                   @include('projects.card')
+                  @include('projects.activity.card')
+
               </div>
           </div>
 

@@ -1,1 +1,1 @@
-<?php
+You created "{{ $activity->subject->body }}"
