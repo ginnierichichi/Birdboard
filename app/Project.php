@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
-    protected $guarded = [];
+    use RecordsActivity;
 
-    public $old = [];
+    protected $guarded = [];
 
     public function path()
     {
@@ -25,7 +25,18 @@ class Project extends Model
         return $this->hasMany(Task::class);
     }
 
-    public function addTask($body)
+    /**
+     * @param array $tasks
+     * @return \Illuminate\Database\Eloquent\Collection
+     */
+
+    public function addTasks($tasks)
+    {
+        return $this->tasks()->createMany($tasks);
+    }
+
+
+        public function addTask($body)
     {
        return $this->tasks()->create(compact('body'));
 
@@ -38,28 +49,39 @@ class Project extends Model
 //        return $this->tasks()->create(compact('body'));         //create new task where the body = input.
     }
 
-    public function recordActivity($description)
+    public function invite(User $user)
     {
-        $this->activity()->create([
-            'description'=> $description,
-            'changes' => [
-                'before' => array_diff($this->old, $this->getAttributes()),
-                'after'=> $this->getChanges()
-            ]
-
-        ]);
-
+        return $this->members()->attach($user);
     }
 
-    protected function activityChanges($description)
+    public function members()
     {
-        if ($description == 'updated') {
-            return [
-                'before' => array_except(array_diff($this->old, $this->getAttributes()), 'updated_at'),
-                'after'=> array_except($this->getChanges(), 'updated_at')
-            ];
-        }
+        return $this->belongsToMany(User::class, 'project_members')->withTimestamps();
     }
+
+
+//    public function recordActivity($description)
+//    {
+//        $this->activity()->create([
+//            'description'=> $description,
+//            'changes' => [
+//                'before' => array_diff($this->old, $this->getAttributes()),
+//                'after'=> $this->getChanges()
+//            ]
+//
+//        ]);
+//
+//    }
+
+//    protected function activityChanges()
+//    {
+//        if ($this->wasChanged()) {
+//            return [
+//                'before' => array_except(array_diff($this->old, $this->getAttributes()), 'updated_at'),
+//                'after'=> array_except($this->getChanges(), 'updated_at')
+//            ];
+//        }
+//    }
 
     public function activity()
     {

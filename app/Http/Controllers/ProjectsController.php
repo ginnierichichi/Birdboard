@@ -1,14 +1,17 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Project;
+
 use Illuminate\Http\Request;
+
+use App\Project;
+use App\Http\Requests\UpdateProjectRequest;
 
 
 class ProjectsController extends Controller
 {
     public function index() {
-        $projects = auth()->user()->projects;
+        $projects = auth()->user()->groupProjects();
 
        return view('projects.index', compact('projects'));
     }
@@ -25,9 +28,29 @@ class ProjectsController extends Controller
         return view('projects.create');
     }
 
+    /**
+     * @return mixed
+     */
 
+    /**
+     * Persist a new project.
+     *
+     * @return mixed
+     */
     public function store()
     {
+        $project = auth()->user()->projects()->create($this->validateRequest());
+
+        if ($tasks = request('tasks')) {
+            $project->addTasks($tasks);
+        }
+
+        if (request()->wantsJson()) {
+            return ['message' => $project->path()];
+        }
+
+        return redirect($project->path());
+
         //validate
         /*$attributes = request()->validateRequest([
             'title'=> 'required',
@@ -38,12 +61,8 @@ class ProjectsController extends Controller
         //dd($attributes);
 
         //$attributes['owner_id'] = auth()->id();  //have to be signed in in order to access
-
-        $project = auth()->user()->projects()->create($this->validateRequest());
-
-        //redirect
-        return redirect($project->path());
     }
+
 
     public function edit(Project $project)
     {
@@ -57,6 +76,13 @@ class ProjectsController extends Controller
         $project->update($this->validateRequest()) ;
 
         return redirect($project->path());
+    }
+
+    public function destroy(Project $project)
+    {
+        $this->authorize('manage', $project);
+        $project->delete();
+        return redirect('/projects');
     }
 
     protected function validateRequest()        //can also use a form request
