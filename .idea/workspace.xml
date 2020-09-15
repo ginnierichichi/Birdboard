@@ -14,64 +14,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f54874a-e542-44ec-b4b2-edd28fef0afc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Dropdown.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/NewProjectModal.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/themes/dark.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/themes/light.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/birdboard.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/birdboard.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Activity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Activity.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Policies/ProjectPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Policies/ProjectPolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Project.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/RecordsActivity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/RecordsActivity.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Task.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/ProjectFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ProjectFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_07_104614_create_activities_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_07_104614_create_activities_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ThemeSwitcher.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ThemeSwitcher.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/Themes/dark.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/BirdboardForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/Themes/light.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/components/dropdown.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/components/button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/components/button.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/components/card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/components/card.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/errors.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/errors.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/projects/activity/card.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/activity/card.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/projects/activity/completed_task.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/activity/completed_task.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/projects/activity/created_project.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/activity/created_project.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/projects/activity/updated_project.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/activity/updated_project.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/projects/card.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/card.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/projects/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/projects/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/projects/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/projects/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/projects/invite.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/invite.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/projects/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ManageProjectsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ManageProjectsTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/TriggerActivityTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/TriggerActivityTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ProjectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ProjectTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/UserTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/UserTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,7 +198,7 @@
       <updated>1599034352989</updated>
       <workItem from="1599034354692" duration="144689000" />
       <workItem from="1599724205254" duration="37849000" />
-      <workItem from="1600093122269" duration="14585000" />
+      <workItem from="1600093122269" duration="15727000" />
     </task>
     <servers />
   </component>
@@ -311,14 +254,18 @@
       <screen x="2560" y="155" width="2560" height="1417" />
     </state>
     <state x="3275" y="724" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/2560.155.2560.1417/-1680.198.1680.1027/0.23.2560.1337@2560.155.2560.1417" timestamp="1599049165655" />
+    <state x="3337" y="311" width="751" height="969" key="find.popup" timestamp="1600166299936">
+      <screen x="2560" y="155" width="2560" height="1337" />
+    </state>
+    <state x="3337" y="311" width="751" height="969" key="find.popup/2560.155.2560.1337/-1680.198.1680.1027/0.23.2560.1417@2560.155.2560.1337" timestamp="1600166299936" />
     <state x="3108" y="386" key="run.anything.popup" timestamp="1599471023395">
       <screen x="2560" y="155" width="2560" height="1417" />
     </state>
     <state x="3108" y="386" key="run.anything.popup/2560.155.2560.1417/-1680.198.1680.1027/0.23.2560.1337@2560.155.2560.1417" timestamp="1599471023395" />
-    <state x="3108" y="462" width="838" height="974" key="search.everywhere.popup" timestamp="1600164924786">
+    <state x="3108" y="462" width="838" height="974" key="search.everywhere.popup" timestamp="1600166163689">
       <screen x="2560" y="155" width="2560" height="1337" />
     </state>
-    <state x="3108" y="462" width="838" height="974" key="search.everywhere.popup/2560.155.2560.1337/-1680.198.1680.1027/0.23.2560.1417@2560.155.2560.1337" timestamp="1600164924786" />
+    <state x="3108" y="462" width="838" height="974" key="search.everywhere.popup/2560.155.2560.1337/-1680.198.1680.1027/0.23.2560.1417@2560.155.2560.1337" timestamp="1600166163689" />
     <state x="3108" y="480" width="838" height="1032" key="search.everywhere.popup/2560.155.2560.1417/-1680.198.1680.1027/0.23.2560.1337@2560.155.2560.1417" timestamp="1600161421775" />
     <state x="3108" y="480" width="838" height="1032" key="search.everywhere.popup/2560.155.2560.1417/-1680.198.1680.949/0.23.2560.1417@2560.155.2560.1417" timestamp="1600098864768" />
   </component>
