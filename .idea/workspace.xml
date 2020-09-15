@@ -15,6 +15,9 @@
   <component name="ChangeListManager">
     <list default="true" id="9f54874a-e542-44ec-b4b2-edd28fef0afc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectTasksController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectTasksController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/RecordsActivity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/RecordsActivity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/projects/activity/created_task.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/activity/created_task.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +201,7 @@
       <updated>1599034352989</updated>
       <workItem from="1599034354692" duration="144689000" />
       <workItem from="1599724205254" duration="37849000" />
-      <workItem from="1600093122269" duration="15727000" />
+      <workItem from="1600093122269" duration="20823000" />
     </task>
     <servers />
   </component>
@@ -262,10 +265,10 @@
       <screen x="2560" y="155" width="2560" height="1417" />
     </state>
     <state x="3108" y="386" key="run.anything.popup/2560.155.2560.1417/-1680.198.1680.1027/0.23.2560.1337@2560.155.2560.1417" timestamp="1599471023395" />
-    <state x="3108" y="462" width="838" height="974" key="search.everywhere.popup" timestamp="1600166163689">
+    <state x="3108" y="462" width="838" height="974" key="search.everywhere.popup" timestamp="1600174396392">
       <screen x="2560" y="155" width="2560" height="1337" />
     </state>
-    <state x="3108" y="462" width="838" height="974" key="search.everywhere.popup/2560.155.2560.1337/-1680.198.1680.1027/0.23.2560.1417@2560.155.2560.1337" timestamp="1600166163689" />
+    <state x="3108" y="462" width="838" height="974" key="search.everywhere.popup/2560.155.2560.1337/-1680.198.1680.1027/0.23.2560.1417@2560.155.2560.1337" timestamp="1600174396392" />
     <state x="3108" y="480" width="838" height="1032" key="search.everywhere.popup/2560.155.2560.1417/-1680.198.1680.1027/0.23.2560.1337@2560.155.2560.1417" timestamp="1600161421775" />
     <state x="3108" y="480" width="838" height="1032" key="search.everywhere.popup/2560.155.2560.1417/-1680.198.1680.949/0.23.2560.1417@2560.155.2560.1417" timestamp="1600098864768" />
   </component>

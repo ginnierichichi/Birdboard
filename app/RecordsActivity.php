@@ -44,7 +44,7 @@ trait RecordsActivity
     /**
      * @return array
      */
-    public static function recordableEvents(): array
+    protected static function recordableEvents(): array
     {
         if (isset(static::$recordableEvents)) {
             return static::$recordableEvents;
@@ -61,9 +61,10 @@ trait RecordsActivity
     public function recordActivity($description)
     {
         $this->activity()->create([
-            'user_id' => ($this->project ?? $this)->owner->id,
+            //'user_id' => ($this->project ?? $this)->owner->id,
+            'user_id' => auth()->user()->id,
             'description' => $description,
-            'changes' => $this->activityChanges($description),
+            'changes' => $this->activityChanges(),
             'project_id' => class_basename($this)==='Project' ? $this->id : $this->project_id
         ]);
     }
